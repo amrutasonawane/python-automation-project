@@ -1,0 +1,18 @@
+import threading
+
+#Here display in callbackfunction, as we are not called it explicitly
+def display():
+	print("Inside display function :", threading.get_ident())
+	for i in range(100):
+		print("Inside display")
+
+def main():
+	print("Inside main : ", threading.get_ident())
+	t = threading.Thread(target=display) # thread get create
+	t.start()
+	t.join() #main wait till t does not stop
+	print("End of main")
+	
+
+if __name__ == "__main__":
+	main()
