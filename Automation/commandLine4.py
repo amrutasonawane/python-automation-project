@@ -1,0 +1,9 @@
+# Python3 commandLine4.py 11 21
+import sys
+def main():	
+	no1 = int(sys.argv [1])
+	no2 = int(sys.argv[2])
+	print("Summation is : ",no1+no2)
+
+if __name__ == "__main__":
+	main()
